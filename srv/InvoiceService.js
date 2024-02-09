@@ -2,7 +2,9 @@ module.exports = (srv) => {
 
     const {Invoice} = cds.entities ('my.invoice')
 
-    cds.User 
+    // srv.before('READ','Invoice',async (req)=>{
+    //   console.log(req.body)
+    // })
 
     // srv.on('READ','Invoice', async (req)=>{
     //     const tx = cds.transaction(req)
