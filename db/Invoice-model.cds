@@ -7,6 +7,7 @@ entity Invoice : managed {
   UniqueName : localized String @mandatory;
   StatusString: String;
   Amount: Decimal;
+  ApprovedBy: User;
   InvoiceLineItems: Composition of many InvoiceLineItem on InvoiceLineItems.Invoice = $self;
 }
 
@@ -16,4 +17,9 @@ entity InvoiceLineItem : managed {
   Amount : Decimal @mandatory;
   TaxRate : Decimal;
   Invoice : Association to Invoice;
+}
+
+type User {
+  ID: UUID;
+  name: String;
 }
