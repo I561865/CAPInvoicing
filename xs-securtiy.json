@@ -1,0 +1,34 @@
+{
+
+  "xsappname":"Invoicing",
+  "tenant-mode":"dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.InvoiceAdmin",
+      "description": "InvoiceAdmin"
+    },
+    {
+      "name": "$XSAPPNAME.InvoiceAgent",
+      "description": "InvoiceAgent"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "InvoiceAdmin",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.InvoiceAdmin"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "InvoiceAgent",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.InvoiceAgent"
+      ],
+      "attribute-references": []
+    }
+  ]
+}

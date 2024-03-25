@@ -1,5 +1,7 @@
-ID;Quantity;Amount;TaxRate;Invoice_ID
-1001;2;50;0;101
-1002;3;100;10;101
-1003;2;100;10;102
-1004;1;1000;0;103
+CreatedAt;CreatedBy;ModifiedAt;ModifiedBy;ID;Quantity;Amount;TaxRate;Invoice_ID
+2024-01-19 03:14:07;Henry Cavil;2024-01-19 03:14:07;Henry Cavil;1004;1;1000;0;103
+2024-01-19 03:14:07;Henry Cavil;2024-01-19 03:14:07;Henry Cavil;1005;1;1000;0;103
+2024-01-19 03:14:07;Henry Cavil;2024-01-19 03:14:07;Henry Cavil;1006;1;1000;0;104
+2024-01-19 03:14:07;Henry Cavil;2024-01-19 03:14:07;Henry Cavil;1007;1;1000;0;104
+2024-01-19 03:14:07;Henry Cavil;2024-01-19 03:14:07;Henry Cavil;1008;1;1000;0;105
+2024-01-19 03:14:07;Henry Cavil;2024-01-19 03:14:07;Henry Cavil;1009;1;1000;0;106

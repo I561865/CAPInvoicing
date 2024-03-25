@@ -7,10 +7,10 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^7",
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3.6.1",
     "express": "^4",
-    "@sap/xssec": "^3",
-    "passport": "^0",
-    "@sap/cds-hana": "^2"
+    "passport": "^0"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
@@ -46,12 +46,10 @@
             ]
           }
         }
-
       },
       "[production]": {
         "auth": {
           "kind": "basic"
-          
         },
         "db": "hana"
       },

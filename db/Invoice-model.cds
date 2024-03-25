@@ -3,11 +3,12 @@ using { managed } from '@sap/cds/common';
 
 
 entity Invoice : managed {
-  key ID  : UUID;
+  key ID  : Integer;
   UniqueName : localized String @mandatory;
   StatusString: String;
-  Amount: Decimal;
-  ApprovedBy: User;
+  grossAmount: Decimal;
+  supplier: Association to Supplier;
+  //ApprovedBy: User;
   InvoiceLineItems: Composition of many InvoiceLineItem on InvoiceLineItems.Invoice = $self;
 }
 
@@ -19,7 +20,15 @@ entity InvoiceLineItem : managed {
   Invoice : Association to Invoice;
 }
 
-type User {
-  ID: UUID;
-  name: String;
+entity Supplier : managed {
+  key ID : UUID;
+  Name : String @mandatory;
+  Invoice: Composition of many Invoice on Invoice.supplier = $self;
 }
+  
+entity Payment: managed {
+  key ID : UUID;
+  NetDueDate : DateTime;
+  invoiceUniqueName : localized String;
+}
+
